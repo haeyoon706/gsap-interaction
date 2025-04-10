@@ -1,31 +1,53 @@
 'use client'
 
-import Heading from "./Heading"
-import Card from "./Card"
-import { useEffect } from "react"
+import Heading from './Heading'
+import Card from './Card'
+import { useEffect, useRef } from 'react'
+import Belt from './Belt'
+import Inquiry from './Inquiry'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import CanvasBackground from './CanvasBackground'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
-  useEffect(()=> {
+  const bgRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
     window?.scrollTo(0, 0)
-  },[])
+
+    if (!bgRef.current) return
+
+    gsap.to(bgRef.current, {
+      y: -200, // 이동 거리
+      ease: 'none',
+      scrollTrigger: {
+        trigger: document.body,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+      },
+    })
+  }, [])
 
   return (
-    <main className="bg-black text-white">
+    <main className="relative text-white overflow-hidden">
+      {/* 배경 */}
+      <CanvasBackground />
+
+      {/* 콘텐츠 */}
       <Heading />
+      <div className="h-[150vh]" />
 
-      {/* spacer로 opacity 0 이후 스크롤 여유 확보 */}
-      <div className="h-[150vh] bg-black" />
+      <Card />
+      <div className="h-[50vh]" />
 
-      {/* 두번째 영역 */}
-      <Card/>
+      <Belt />
+      <div className="h-[50vh]" />
 
-      {/* spacer로 opacity 0 이후 스크롤 여유 확보 */}
-      <div className="h-[150vh] bg-black" />
-
-      {/* 세번째 영역 */}
-      <div className="h-screen bg-black text-white flex items-center justify-center text-3xl font-bold">
-        third
-      </div>
+      <Inquiry />
+      <div className="h-[150vh]" />
     </main>
   )
 }

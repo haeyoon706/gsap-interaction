@@ -10,17 +10,17 @@ gsap.registerPlugin(ScrollTrigger)
 const cards = [
   {
     title: 'Creative Vision',
-    image: 'https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWl8ZW58MHx8MHx8fDA%3D',
+    image: 'https://images.unsplash.com/photo-1511275539165-cc46b1ee89bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGNhdHxlbnwwfHwwfHx8MA%3D%3D',
     content: 'We transform your ideas into beautiful digital experiences.',
   },
   {
     title: 'Tech Innovation',
-    image: 'https://plus.unsplash.com/premium_photo-1723662084148-2cd2357705ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHV6emxlfGVufDB8fDB8fHww',
+    image: 'https://images.unsplash.com/photo-1568615944078-821ced977caa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxjYXR8ZW58MHx8MHx8fDA%3D',
     content: 'Cutting-edge technology meets bold thinking.',
   },
   {
     title: 'Bold Aesthetics',
-    image: 'https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGdhbWV8ZW58MHx8MHx8fDA%3D',
+    image: 'https://images.unsplash.com/photo-1513977055326-8ae6272d90a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk0fHxjYXR8ZW58MHx8MHx8fDA%3D',
     content: 'Visually stunning interfaces that leave an impact.',
   },
 ]
@@ -81,7 +81,7 @@ export default function FancyCards() {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen bg-black text-white px-6 py-20 flex flex-col items-center gap-24"
+      className="min-h-screen px-6 py-20 flex flex-col items-center gap-24"
     >
       {cards.map((card, idx) => (
         <div
