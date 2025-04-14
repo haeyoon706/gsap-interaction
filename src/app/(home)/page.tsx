@@ -9,6 +9,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import CanvasBackground from './CanvasBackground'
 import ScatterText from './ScatterText'
+import Cube from './Cube'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -27,6 +28,9 @@ export default function Home() {
       <Heading />
       <div className="h-[100vh]" />
 
+      <Cube />
+      <div className="h-[50vh]" />
+
       <ScatterText />
 
       <Card />
@@ -34,6 +38,7 @@ export default function Home() {
 
       <Belt />
       <div className="h-[50vh]" />
+
 
       <Inquiry />
       <div className="h-[150vh]" />

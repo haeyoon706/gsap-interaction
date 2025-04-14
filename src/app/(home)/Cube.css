@@ -1,0 +1,82 @@
+.cube-container {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cube-wrapper {
+    perspective: 1000px;
+    cursor: pointer;
+    height: 120px;
+    width: 100%;
+  }
+  
+  .cube {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg);
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+  }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 90px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    color: white;
+  }
+  
+  .front {
+    background-color: transparent;
+    transform: rotateX(0deg) translateZ(60px);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(60px);
+    padding-left: 10px; /* 여유 여백 */
+    box-sizing: border-box;
+  }
+  
+  /* Hover에 보여지는 면의 배경색 */
+  .top-1 {
+    background-color: #339DFF;
+  }
+  
+  .top-2 {
+    background-color: #FFBD27;
+  }
+  
+  .top-3 {
+    background-color: #FF3B1F;
+  }
+  
+  /* marquee 스타일 */
+  .marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  
+  .marquee-text {
+    font-size: 90px;
+    font-weight: 900;
+    color: white;
+    display: inline-block;
+    padding-right: 30px; 
+    flex-shrink: 0;
+  }
