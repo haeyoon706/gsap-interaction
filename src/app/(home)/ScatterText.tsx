@@ -73,7 +73,7 @@ export default function ScatterText() {
   }, [])
 
   return (
-    <section className="relative h-[400vh]">
+    <section className="relative h-[400vh] overflow-x-hidden">
       <div
         ref={containerRef}
         className="h-screen flex items-center justify-center text-center text-4xl leading-relaxed font-semibold"
